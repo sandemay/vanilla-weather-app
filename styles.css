@@ -1,0 +1,82 @@
+h1 {
+  color: black
+  text-align: center;
+  font-size: 40px;
+  padding: 0 auto;
+  padding-top: 50px;
+  font-family: monospace;
+
+  
+}
+form {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+h2 {
+  text-align: center;
+  font-size: 20px;
+}
+h5 {
+  text-align: center;
+  font-size: 14px;
+   padding: 0 auto;
+}
+
+h6 {
+  text-align: center;
+  font: 300;
+  font-family: fantasy;
+  padding-top: 30px;
+  font-size: 14px;
+}
+
+p {
+  text-align: center;
+   padding: 0 auto;
+}
+
+body {
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 150%);
+  text-align: center;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 800px;
+  margin: 30px auto;
+  font-family: monospace;
+}
+
+hr {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+submit {
+  width: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  border: 20px solid rgb(133, 36, 36);
+}
+
+
+
+.weather-app {
+  padding: 10px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.btn-outline-success {
+  margin: 12px;
+  padding: 5px;
+  border-radius: 14px;
+  border: 2px solid rgb(210, 236, 212);
+  background-color: seagreen;
+  background-color: #dbf8cd;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
