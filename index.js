@@ -108,32 +108,9 @@ function showWeather(response) {
   getForecast(response.data.coord);
 }
 
-function handlePosition(position) {
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let apiKey = "a23d851849871199f2c9de1d2c17b86e";
-  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
-  axios.get(url).then(showWeather2);
-}
-
-function getCurrentPosition() {
-  navigator.geolocation.getCurrentPosition(handlePosition);
-}
-
-function showWeather2(response) {
-  let h3 = document.querySelector("h3");
-  let temperature = Math.round(response.data.main.temp);
-  h3.innerHTML = `${response.data.name} ${temperature}°  `;
-}
-
-let button = document.querySelector("button");
-button.addEventListener("click", getCurrentPosition);
-
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
-
-getCurrentPosition();
-getForecast();
+search("London");
