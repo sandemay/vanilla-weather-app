@@ -17,10 +17,10 @@
   </head>
   <body>
     <h1>Weather forecast</h1>
-   
+ 
      <div class="weather-app">
         <form id="search-form">
-          <label for="Location" class="form-label">Please type the city</label>
+          <label for="Location" class="form-label"><strong>Please type the city</strong></label>
           <input
             type="text"
             placeholder="city"
@@ -31,36 +31,36 @@
                   type="submit"
                   value="Search"
                   class="btn btn-outline-success"
-                />
-       
-         <label for="CurrentLocation" class="current-label"> or press </label><button id="current location" class="btn btn-outline-success">Current location</button>
+                /> <label for="CurrentLocation" class="current-label"> <strong>or press</strong></label><button id="current location" class="btn btn-outline-success">Current location</button>
         </form> 
-        <hr />
       </div>
       </div>
-
+     
       <div class="row">
         <div class="col-sm-6">
           <div class="card">
             <div class="card-body">
               <h2>Currently:</h2>
-              <h5 class="card-title"><strong>London 21° </strong></h5>
+              <h3 class="card-title" id="city"><strong> </strong></h3>
               <p class="time">Time</p>
               <p id="description"></li></p>
-            <img src="" alt="Clear" id="icon" class="float-left" />
+            <img src="" alt=" " id="icon" class="float-left" />
             </div>
           </div>
         </div>
         <div class="col-sm-5">
           <div class="card">
             <div class="card-body">
+               <h2> Upcoming days: </h2>
               <div class="col-sm-5">
-                <h2>Upcoming days:</h2>
-                <h5 class="card-title">Monday:</h5>
-                <h5 class="card-title">Tuesday:</h5>
-                <h5 class="card-title">Wednesday:</h5>
-                <h5 class="card-title">Thursday:</h5>
-                <h5 class="card-title">Friday:</h5>
+               
+                <h5 class="card-title">Day:</h5>
+                <h5 class="card-title">Day:</h5>
+                <h5 class="card-title">Day:</h5>
+                <h5 class="card-title">Day:</h5>
+                <h5 class="card-title">Day:</h5>
+                
+             
               </div>
             </div>
           </div>

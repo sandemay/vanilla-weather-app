@@ -21,8 +21,8 @@ time.innerHTML = ` ${day} ${hour}:${minutes}`;
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
-  let h5 = document.querySelector("h5");
-  h5.innerHTML = ` ${searchInput.value} `;
+  let h3 = document.querySelector("h3");
+  h3.innerHTML = ` ${searchInput.value} `;
   let apiKey = "a23d851849871199f2c9de1d2c17b86e";
   let city = ` ${searchInput.value} `;
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -33,10 +33,10 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
 function showWeather(response) {
-  let h5 = document.querySelector("h5");
+  let h3 = document.querySelector("h3");
   let city2 = document.querySelector("#search-input").value;
   let temperature = Math.round(response.data.main.temp);
-  h5.innerHTML = `${city2} ${temperature}°`;
+  h3.innerHTML = `${city2} ${temperature}°`;
   let descriptionElement = document.querySelector("#description");
 
   let iconElement = document.querySelector("#icon");
@@ -61,9 +61,9 @@ function getCurrentPosition() {
 }
 
 function showWeather2(response) {
-  let h5 = document.querySelector("h5");
+  let h3 = document.querySelector("h3");
   let temperature = Math.round(response.data.main.temp);
-  h5.innerHTML = `${response.data.name} ${temperature}°  `;
+  h3.innerHTML = `${response.data.name} ${temperature}°  `;
 }
 
 let button = document.querySelector("button");

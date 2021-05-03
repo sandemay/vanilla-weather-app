@@ -1,7 +1,8 @@
 h1 {
   color: black;
   text-align: center;
-  font-size: 40px;
+  font-size: 45px;
+  font-weight: 500;
   padding: 0 auto;
   padding-top: 50px;
   font-family: monospace;
@@ -15,30 +16,41 @@ form {
 h2 {
   text-align: center;
   font-size: 20px;
+  padding: 10px;
 }
+h3 {
+  text-align: center;
+  font-size: 18px;
+  padding: 0 auto;
+  margin: 2px;
+  font-weight: 700;
+}
+
 h5 {
   text-align: center;
   font-size: 14px;
   padding: 0 auto;
+  margin: 2px;
 }
 
 h6 {
   text-align: center;
   font: 300;
   font-family: fantasy;
-  padding-top: 30px;
+  padding-top: 70px;
   font-size: 14px;
 }
 
 p {
   text-align: center;
   padding: 0 auto;
+  margin: 2px;
 }
 
 body {
   background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 150%);
   text-align: center;
-  height: auto;
+  height: 800px;
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 800px;
@@ -64,15 +76,34 @@ submit {
   border-radius: 5px;
   font-family: monospace;
   font-size: 14px;
+  border: black;
 }
 
 .btn-outline-success {
-  margin: 12px;
-  padding: 5px;
+  margin: 8px;
+  padding: 3px;
   border-radius: 14px;
   border: 2px solid rgb(210, 236, 212);
   background-color: seagreen;
   background-color: #dbf8cd;
   transition-duration: 0.4s;
   cursor: pointer;
+}
+
+.card {
+  background-color: rgb(199, 229, 232);
+  height: 250px;
+  width: 380px;
+  border-radius: 20px;
+  border-color: cadetblue;
+  margin-top: 50px;
+}
+
+form {
+  font-size: 16px;
+  margin: 0 auto;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
