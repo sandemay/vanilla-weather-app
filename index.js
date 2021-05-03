@@ -16,7 +16,7 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 let day = days[now.getDay()];
-time.innerHTML = ` ${day} ${hour}:${minutes}`;
+time.innerHTML = `Last updated: ${day} ${hour}:${minutes}`;
 
 function search(event) {
   event.preventDefault();
@@ -40,7 +40,9 @@ function showWeather(response) {
   let descriptionElement = document.querySelector("#description");
 
   let iconElement = document.querySelector("#icon");
+
   descriptionElement.innerHTML = response.data.weather[0].description;
+
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
