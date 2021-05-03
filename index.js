@@ -94,7 +94,11 @@ function showWeather(response) {
   let temperature = Math.round(response.data.main.temp);
   h3.innerHTML = `${city2} ${temperature}°`;
   let descriptionElement = document.querySelector("#description");
+  let windElement = document.querySelector("#wind");
+  let humidityElement = document.querySelector("#humidity");
   let iconElement = document.querySelector("#icon");
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  humidityElement.innerHTML = response.data.main.humidity;
   descriptionElement.innerHTML = response.data.weather[0].description;
   iconElement.setAttribute(
     "src",
