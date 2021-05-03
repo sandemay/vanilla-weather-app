@@ -127,3 +127,9 @@ function showWeather2(response) {
 
 let button = document.querySelector("button");
 button.addEventListener("click", getCurrentPosition);
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
