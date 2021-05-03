@@ -18,6 +18,32 @@ if (minutes < 10) {
 let day = days[now.getDay()];
 time.innerHTML = `Last updated: ${day} ${hour}:${minutes}`;
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = "";
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+  <div class="col-sm-12">
+    <div class="weather-forecast-date">
+      ${day}
+      <img
+        src="http://openweathermap.org/img/wn/50d@2x.png"
+        alt=""
+        width="40"
+      />
+      <span class="weather-forecast-temperature-max"> 18° </span>
+      <span class="weather-forecast-temperature-min"> 12° </span>
+    </div>
+  </div> `;
+  });
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-input");
@@ -28,6 +54,8 @@ function search(event) {
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(url).then(showWeather);
 }
+
+displayForecast();
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
@@ -70,3 +98,6 @@ function showWeather2(response) {
 
 let button = document.querySelector("button");
 button.addEventListener("click", getCurrentPosition);
+
+search("New York");
+displayForecast();

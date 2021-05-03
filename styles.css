@@ -88,7 +88,7 @@ submit {
 
 .card {
   background-color: rgb(199, 229, 232);
-  height: 250px;
+  height: 300px;
   width: 380px;
   border-radius: 20px;
   border-color: cadetblue;
@@ -102,4 +102,14 @@ form {
   padding-right: 0px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.weather-forecast-date {
+  font-weight: 600;
+  padding: 0 auto;
+  font-size: 15px;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.7;
 }
